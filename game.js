@@ -27,12 +27,17 @@ function draw() {
   ctx.fillStyle = "black";
   ctx.fillRect(0,0,canvas.width,canvas.height);
 
+  // Player
   ctx.fillStyle = "white";
-  ctx.font = "20px monospace";
+  ctx.font = "40px monospace";
+  ctx.textAlign = "center";
   ctx.fillText("c50c", player.x, player.y);
 
+  // Obstacles
   for (let o of obstacles) {
     ctx.fillStyle = o.color;
+    ctx.font = "30px monospace";
+    ctx.textAlign = "center";
     ctx.fillText("d00r", o.x, o.y);
   }
 }
