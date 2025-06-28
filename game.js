@@ -57,7 +57,7 @@ function update() {
 
   obstacles = obstacles.filter(o => o.y < canvas.height + 50);
 
-  if (Math.floor(score) % 100 === 0 && Math.floor(score) !== 0) {
+  if (Math.floor(score) % 1 === 0 && Math.floor(score) !== 0) {
     targetColor = {
       r: Math.floor(Math.random() * 255),
       g: Math.floor(Math.random() * 255),
