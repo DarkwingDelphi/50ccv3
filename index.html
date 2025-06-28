@@ -1,19 +1,39 @@
-//
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>50cc</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>c50c v0.5 alpha</title>
   <style>
-    html, body { margin:0; padding:0; background:#000; overflow:hidden; color:white; font-family:monospace; }
-    #score { position:absolute; top:10px; left:10px; }
+    html, body {
+      margin:0; padding:0;
+      background:black;
+      color:white;
+      font-family:monospace;
+      overflow:hidden;
+      touch-action:none;
+    }
     canvas { display:block; }
+    #score, #version, #gameOver {
+      position:absolute;
+      padding:8px;
+      background:rgba(0,0,0,0.5);
+    }
+    #score { top:0; left:0; }
+    #version { top:0; right:0; }
+    #gameOver {
+      top:50%; left:50%;
+      transform:translate(-50%,-50%);
+      font-size:24px;
+      display:none;
+    }
   </style>
 </head>
 <body>
+  <canvas id="gameCanvas"></canvas>
   <div id="score">Score: 0 miles</div>
-  <canvas id="game"></canvas>
+  <div id="version">v0.5 alpha</div>
+  <div id="gameOver">You touched the d00r! Tap or press R to restart.</div>
   <script src="game.js"></script>
 </body>
 </html>
